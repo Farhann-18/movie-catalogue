@@ -1,19 +1,18 @@
 const CONFIG = {
   // API KEY https://www.themoviedb.org
-  KEY: 'YOUR_API_KEY',
-  BASE_URL: 'https://api.themoviedb.org/3/',
-  BASE_IMAGE_URL: 'https://image.tmdb.org/t/p/w500/',
+  KEY: process.env.API_KEY_TMDB,
+  BASE_URL: process.env.BASE_URL,
+  BASE_IMAGE_URL: `${process.env.BASE_IMAGE_URL}/t/p/w500/`,
   DEFAULT_LANGUAGE: 'en-us',
   // INDEXED DATABASE & PRECACHING SERVICE WORKER
-  DATABASE_NAME: 'movie-catalogue-database',
-  DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'movies',
-  CACHE_NAME: 'MovieCatalogue-V1',
-  // WSS PUSH NOTIFICATION
-  WEB_SOCKET_SERVER: 'wss://movies-feed.dicoding.dev',
-  PUSH_MSG_VAPID_PUBLIC_KEY: 'BN7-r0Svv7CsTi18-OPYtJLVW0bfuZ1x1UtrygczKjennA_qs7OWmgOewcuYSYF3Gc_mPbqsDh2YoGCDPL0RxDQ',
-  PUSH_MSG_SUBSCRIBE_URL: 'https://dicoding-movie-push-notif.netlify.app/.netlify/functions/subscribe',
-  PUSH_MSG_UNSUBSCRIBE_URL: 'https://dicoding-movie-push-notif.netlify.app/.netlify/functions/unsubscribe',
+  DATABASE_NAME: process.env.DATABASE_NAME,
+  DATABASE_VERSION: process.env.DATABASE_VERSION,
+  OBJECT_STORE_NAME: process.env.OBJECT_STORE_NAME,
+  //  WSS PUSH NOTIFICATION
+  WEB_SOCKET_SERVER: process.env.WEB_SOCKET_SERVER,
+  PUSH_MSG_VAPID_PUBLIC_KEY: process.env.PUSH_MSG_VAPID_PUBLIC_KEY,
+  PUSH_MSG_SUBSCRIBE_URL: process.env.PUSH_MSG_SUBSCRIBE_URL,
+  PUSH_MSG_UNSUBSCRIBE_URL: process.env.PUSH_MSG_UNSUBSCRIBE_URL,
 };
 
 export default CONFIG;
