@@ -1,5 +1,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webConfig = require('./webpack.config');
 
 module.exports = merge(webConfig, {
@@ -17,4 +18,7 @@ module.exports = merge(webConfig, {
     },
     compress: true,
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
 });
