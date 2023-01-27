@@ -1,12 +1,15 @@
+/* eslint-disable comma-spacing */
 /* eslint-disable no-unused-vars */
 import UrlParser from '../../routes/url-parser';
 import TheMovieDbSource from '../../data/themoviedb-source';
-import { createMovieDetailTemplate } from '../templates/template-creator';
+import { createMovieDetailTemplate,createLikeButtonTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
     return `
        <div id="movie" class="movie"></div>
+        <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -15,6 +18,17 @@ const Detail = {
     const movie = await TheMovieDbSource.detailMovie(url.id);
     const moviesContainer = document.querySelector('#movie');
     moviesContainer.innerHTML += createMovieDetailTemplate(movie);
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      movie: {
+        id: movie.id,
+        title: movie.title,
+        overview: movie.overview,
+        backdrop_path: movie.backdrop_path,
+        vote_average: movie.vote_average,
+      },
+    });
   },
 };
 
