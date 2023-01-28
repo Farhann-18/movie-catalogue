@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import 'regenerator-runtime';
 
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import WebWorkerRegister from './utils/webWorkerRegister';
 import WebSocketInitiator from './utils/websocket-initiator';
-import FooterToolsInitiator from './utils/footer-tools-initiator';
 import CONFIG from './globals/config';
 
 const app = new App({
@@ -23,10 +24,4 @@ window.addEventListener('load', async () => {
   app.renderPage();
   await WebWorkerRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
-
-  // Initialize footer tools
-  FooterToolsInitiator.init({
-    subscribeButton: document.querySelector('#subscribePushNotification'),
-    unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
-  });
 });

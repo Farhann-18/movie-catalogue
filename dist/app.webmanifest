@@ -1,8 +1,8 @@
 {
   "id": "movie-catalogue-lite-pwa-1",
   "start_url": "./index.html",
-  "name": "Movie Catalogue Lite",
-  "short_name": "Movie Lite",
+  "name": "Movie Catalogue PWA",
+  "short_name": "Movie Catalogue",
   "description": "Free Catalogue Movie for you",
   "display": "standalone",
   "background_color": "#FFFFFF",

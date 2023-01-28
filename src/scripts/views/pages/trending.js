@@ -4,12 +4,12 @@ import TheMovieDbSource from '../../data/themoviedb-source';
 
 import { createMovieItemTemplate } from '../templates/template-creator';
 
-const NowPlaying = {
+const Trending = {
   async render() {
     return `
     <section id="movies-container">
         <div class="content mx-3 pt-3">
-          <h2 class="content__heading">Sedang Tayang Di Bioskop</h2>
+          <h2 class="content__heading">Semua Film Trending Hari Ini</h2>
           <hr>
           <div id="movies" class="movies"></div>
         </div>
@@ -18,7 +18,7 @@ const NowPlaying = {
   },
 
   async afterRender() {
-    const movies = await TheMovieDbSource.nowPlayingMovies();
+    const movies = await TheMovieDbSource.trendingMovies();
     const moviesContainer = document.querySelector('#movies');
 
     movies.map((movie) => {
@@ -27,4 +27,4 @@ const NowPlaying = {
   },
 };
 
-export default NowPlaying;
+export default Trending;

@@ -16,10 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Movie Catalogue</title>
 </head>
 
 <body>
+
     <header class="app-bar">
         <div class="app-bar__menu">
             <button id="hamburgerButton">☰</button>
@@ -29,19 +31,17 @@
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
             <ul>
-                <li><a href="#/">Home</a></li>
-                <li><a href="#/now-playing">Now Playing</a></li>
-                <li><a href="#/upcoming">Upcoming</a></li>
-                <li><a href="#/like">Liked Movies</a></li>
+                <li><a href="#/" class="active">Beranda</a></li>
+                <li><a href="#/list-movies">Semua Film</a></li>
+                <li><a href="#/trending">Trending</a></li>
+                <li><a href="#/populer">Populer</a></li>
+                <li><a href="#/upcoming">Terbaru</a></li>
+                <li><a href="#/like">Disukai</a></li>
             </ul>
         </nav>
     </header>
     <main id="mainContent"></main>
     <footer>
-        <div id="footerTools">
-            <button id="subscribePushNotification" class="btn">Subscribe Push Notification</button>
-            <button id="unsubscribePushNotification" class="btn">Unsubscribe Push Notification</button>
-        </div>
         <p>All data obtained from <a href="https://themoviedb.org" target="_blank" rel="noreferrer">TheMovieDB</a></p>
     </footer>
 </body>

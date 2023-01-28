@@ -7,12 +7,12 @@ import { createMovieItemTemplate } from '../templates/template-creator';
 const Like = {
   async render() {
     return `
-    <div class="content">
-      <h2 class="content__heading">Your Liked Movie</h2>
-      <div id="movies" class="movies">
- 
+    <section id="movies-container">
+      <div class="content mx-3 pt-5">
+        <h2 class="content__heading">Semua Daftar Film Kamu Sukai</h2>
+        <div id="movies" class="movies"></div>
       </div>
-    </div>
+    </section>
   `;
   },
   async afterRender() {

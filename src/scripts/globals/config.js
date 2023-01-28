@@ -1,5 +1,5 @@
 const CONFIG = {
-  // API KEY https://www.themoviedb.org
+  // API KEY FROM https://www.themoviedb.org
   KEY: process.env.API_KEY_TMDB,
   BASE_URL: process.env.BASE_URL,
   BASE_IMAGE_URL: `${process.env.BASE_IMAGE_URL}/t/p/w500/`,

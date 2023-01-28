@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-empty-function */
 /* eslint-disable no-unused-vars */
 import FavoriteMovieIdb from '../data/favorite-movie-idb';
@@ -31,8 +32,25 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteMovieIdb.putMovie(this._movie);
-      this._renderButton();
+      Swal.fire({
+        title: 'Apakah kamu yakin menyukai film ini.?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, saya suka',
+        cancelButtonText: 'Tidak',
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await FavoriteMovieIdb.putMovie(this._movie);
+          this._renderButton();
+          Swal.fire(
+            'success',
+            'Berhasil ,menambahkan film disukai.',
+            'success',
+          );
+        }
+      });
     });
   },
 
@@ -41,8 +59,25 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteMovieIdb.deleteMovie(this._movie.id);
-      this._renderButton();
+      Swal.fire({
+        title: 'Apakah kamu yakin menghapus film disukai ini.?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Hapus',
+        cancelButtonText: 'Tidak',
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await FavoriteMovieIdb.deleteMovie(this._movie.id);
+          this._renderButton();
+          Swal.fire(
+            'success',
+            'Berhasil ,menghapus film disukai.',
+            'success',
+          );
+        }
+      });
     });
   },
 };

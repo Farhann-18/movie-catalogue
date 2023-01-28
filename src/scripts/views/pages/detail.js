@@ -8,7 +8,7 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
-       <div id="movie" class="movie"></div>
+        <div id="movie" class="container"></div>
         <div id="likeButtonContainer"></div>
     `;
   },
@@ -16,6 +16,7 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const movie = await TheMovieDbSource.detailMovie(url.id);
+    console.log(movie);
     const moviesContainer = document.querySelector('#movie');
     moviesContainer.innerHTML += createMovieDetailTemplate(movie);
 

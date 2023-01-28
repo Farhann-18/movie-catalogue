@@ -6,10 +6,13 @@ import { createMovieItemTemplate } from '../templates/template-creator';
 const Upcoming = {
   async render() {
     return `
-        <div class="content">
-          <h2 class="content__heading">Upcoming in Cinema</h2>
-          <div id="movies" class="movies">
-        </div>
+        <section id="movies-container">
+          <div class="content mx-3 pt-3">
+            <h2 class="content__heading">Terbaru Di Tahun Ini</h2>
+            <hr>
+            <div id="movies" class="movies">
+          </div>
+        </section
     `;
   },
 
