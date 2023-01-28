@@ -17,7 +17,7 @@ const Homepage = {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="content mx-3 pt-3"> 
+                        <div class="content pt-3"> 
                             <div class="d-flex justify-content-between">
                                 <h2 class="content__heading">Sedang Tayang</h2>
                                 <a href="#/now-playing" class="text-end text-dark text-decoration-none"> Lihat semua</a>
@@ -31,7 +31,7 @@ const Homepage = {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="content mx-3 pt-3"> 
+                        <div class="content pt-3"> 
                             <div class="d-flex justify-content-between">
                                 <h2 class="content__heading">Sedang Populer</h2>
                                 <a href="#/populer" class="text-end text-dark text-decoration-none"> Lihat semua</a>
@@ -45,7 +45,7 @@ const Homepage = {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="content mx-3 pt-3"> 
+                        <div class="content pt-3"> 
                             <div class="d-flex justify-content-between">
                                 <h2 class="content__heading">Trending Hari Ini</h2>
                                 <a href="#/trending" class="text-end text-dark text-decoration-none"> Lihat semua</a>
