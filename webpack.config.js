@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 const Dotenv = require('dotenv-webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -49,9 +48,6 @@ module.exports = {
       path: path.resolve(__dirname, '.env'),
       systemvars: true,
       safe: true,
-    }),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
     }),
   ],
 };
