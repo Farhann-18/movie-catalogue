@@ -1,4 +1,4 @@
-import API_ENDPOINT from '../globals/api-endpoint';
+import API_ENDPOINT from "../globals/api-endpoint";
 
 class TheMovieDbSource {
   static async nowPlayingMovies() {
@@ -31,8 +31,19 @@ class TheMovieDbSource {
     return responseJson.results;
   }
 
+  static async latestMovies() {
+    const response = await fetch(API_ENDPOINT.LATEST);
+    const responseJson = await response.json();
+    return responseJson;
+  }
+
   static async detailMovie(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
+    return response.json();
+  }
+
+  static async detailTrailer(id) {
+    const response = await fetch(API_ENDPOINT.VIDEOS(id));
     return response.json();
   }
 }

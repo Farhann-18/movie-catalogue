@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import CONFIG from '../../globals/config';
+import CONFIG from "../../globals/config";
 
 const createMovieDetailTemplate = (movie) => `
   <div class="movies-container py-3">
@@ -9,7 +9,9 @@ const createMovieDetailTemplate = (movie) => `
     </div>
     <div class="row justify-content-arround">
         <div class="col-lg-4 col-md-6">
-              <img class="movie__poster img-fluid rounded w-100" src="${CONFIG.BASE_IMAGE_URL + movie.poster_path}" alt="${movie.title}" />
+              <img class="movie__poster img-fluid rounded w-100" src="${
+                CONFIG.BASE_IMAGE_URL + movie.poster_path
+              }" alt="${movie.title}" />
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="movie__info">
@@ -47,8 +49,10 @@ const createMovieDetailTemplate = (movie) => `
                 </li>
               </ul>
             </div>
-            <div class="mx-3">
-               <a href="${movie.homepage}" target="_blank" class="btn btn-md btn-danger rounded">Menonton</a>
+            <div class="mx-3 mb-3">
+               <a href="${
+                 movie.homepage
+               }" target="_blank" class="btn btn-md btn-danger rounded">Watch Movie</a>
             </div>
         </div>
     </div>
@@ -60,7 +64,11 @@ const createMovieItemTemplate = (movie) => `
     <div class="movie-item__header">
     <a href="/#/detail/${movie.id}">
       <img class="movie-item__header__poster rounded" alt="${movie.title}"
-           src="${movie.backdrop_path ? CONFIG.BASE_IMAGE_URL + movie.backdrop_path : 'https://picsum.photos/id/666/800/450?grayscale'}">
+           src="${
+             movie.backdrop_path
+               ? CONFIG.BASE_IMAGE_URL + movie.backdrop_path
+               : "https://picsum.photos/id/666/800/450?grayscale"
+           }">
         </a>
     </div>
     <div class="movie-item__content">
@@ -72,16 +80,19 @@ const createMovieItemTemplate = (movie) => `
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this movie" id="likeButton" class="like">
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
+     <i class="fa fa-bookmark-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this movie" id="likeButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <i class="fa fa-bookmark" aria-hidden="true"></i>
   </button>
 `;
 
 export {
-  createMovieItemTemplate, createMovieDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate,
+  createMovieItemTemplate,
+  createMovieDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };
