@@ -5,7 +5,6 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 
@@ -75,6 +74,5 @@ module.exports = {
       systemvars: true,
       safe: true,
     }),
-    new BundleAnalyzerPlugin(),
   ],
 };
