@@ -1,11 +1,12 @@
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const { merge } = require('webpack-merge');
-const path = require('path');
-const webConfig = require('./webpack.config');
+/* eslint-disable quotes */
+const { merge } = require("webpack-merge");
+const path = require("path");
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const webConfig = require("./webpack.config");
 
 module.exports = merge(webConfig, {
-  mode: 'production',
-  devtool: 'source-map',
+  mode: "production",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -13,9 +14,9 @@ module.exports = merge(webConfig, {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env'],
+              presets: ["@babel/preset-env"],
             },
           },
         ],
@@ -24,8 +25,8 @@ module.exports = merge(webConfig, {
   },
   plugins: [
     new WorkboxWebpackPlugin.InjectManifest({
-      swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
-      swDest: './sw.bundle.js',
+      swSrc: path.resolve(__dirname, "src/scripts/sw.js"),
+      swDest: "./sw.bundle.js",
     }),
   ],
 });
