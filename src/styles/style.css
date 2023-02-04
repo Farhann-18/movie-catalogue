@@ -308,7 +308,7 @@ footer #footerTools {
 }
 
 .movie-bg {
-    background-image: url('https://wallpapercave.com/wp/wp2321233.jpg') !important;
+    background-image: url('../public/images/bg_hero1.jpg') !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

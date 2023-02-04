@@ -1,7 +1,7 @@
 {
   "id": "movie-catalogue-lite-pwa-1",
   "start_url": "./index.html",
-  "name": "Movie Catalogue PWA",
+  "name": "Movie Catalogue",
   "short_name": "Movie Catalogue",
   "description": "Free Catalogue Movie for you",
   "display": "standalone",

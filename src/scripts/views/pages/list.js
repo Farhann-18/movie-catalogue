@@ -8,7 +8,7 @@ const List = {
   async render() {
     return `
     <section id="movie-catalogue-container">
-        <div class="container-fluid p-2 movie-bg" style="background-image: url('https://images.hdqwalls.com/download/fast-and-furious-9-the-fast-saga-2020-movie-i5-2560x1440.jpg') !important;">
+        <div class="container-fluid p-2 movie-bg">
             <div class="d-flex justify-content-center align-self-center mb-3">
                     <header class="movie-bg-header px-3">
                         <h3 class="text-white">Welcome Movie Catalogue</h3>
