@@ -9,7 +9,7 @@ const createMovieDetailTemplate = (movie) => `
     </div>
     <div class="row justify-content-arround">
         <div class="col-lg-4 col-md-6">
-              <img class="movie__poster img-fluid rounded w-100" src="${
+              <img class="movie__poster img-fluid rounded w-100 lazyload" src="${
                 CONFIG.BASE_IMAGE_URL + movie.poster_path
               }" alt="${movie.title}" />
         </div>
@@ -63,7 +63,9 @@ const createMovieItemTemplate = (movie) => `
   <div class="movie-item">
     <div class="movie-item__header">
     <a href="/#/detail/${movie.id}">
-      <img class="movie-item__header__poster rounded" alt="${movie.title}"
+      <img class="movie-item__header__poster rounded lazyload" alt="${
+        movie.title
+      }"
            src="${
              movie.backdrop_path
                ? CONFIG.BASE_IMAGE_URL + movie.backdrop_path
