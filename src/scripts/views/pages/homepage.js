@@ -13,7 +13,7 @@ const Homepage = {
             <div class="container-fluid p-2 movie-bg">
                 <div class="d-flex justify-content-center align-self-center mb-3">
                     <header class="movie-bg-header px-3">
-                        <h3 class="text-white">Welcome Movie Catalogue</h3>
+                        <h1 class="text-white">Welcome Movie Catalogue</h1>
                         <p>Search & find the latest movies</p>
                     </header>    
                 </div>
@@ -23,7 +23,7 @@ const Homepage = {
                     <div class="col-md-12">
                         <div class="d-flex justify-content-between mb-3">
                                 <h2 class="content__heading">Now Playing In Cinema</h2>
-                                <a href="#/now-playing" class="text-end text-dark text-decoration-none"> Show All</a>
+                                <a href="#/nowplaying-movies" aria-label="Now Playing Movie"  class="text-end text-dark text-decoration-none"> Show All</a>
                         </div>
                         <div class="row">
                             <div class="col"><div id="moviesNowPlaying" class="movies"></div></div>
@@ -36,7 +36,7 @@ const Homepage = {
                     <div class="col-md-12">
                         <div class="d-flex justify-content-between mb-3">
                                 <h2 class="content__heading">Populer Movies</h2>
-                                <a href="#/populer" class="text-end text-dark text-decoration-none"> Show All</a>
+                                <a href="#/populer-movies" aria-label="Populer Movie" class="text-end text-dark text-decoration-none"> Show All</a>
                         </div>
                         <div class="row">
                             <div class="col"><div id="moviesPopular" class="movies"></div></div>
@@ -49,7 +49,7 @@ const Homepage = {
                     <div class="col-md-12">
                         <div class="d-flex justify-content-between mb-3">
                                 <h2 class="content__heading">Upcoming Movies</h2>
-                                <a href="#/upcoming" class="text-end text-dark text-decoration-none"> Show All</a>
+                                <a href="#/upcoming-movies" aria-label="Upcoming Movie" class="text-end text-dark text-decoration-none"> Show All</a>
                         </div>
                         <div class="row">
                             <div class="col"><div id="moviesUpcoming" class="movies"></div></div>

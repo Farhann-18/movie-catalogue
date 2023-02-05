@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import NowPlaying from "../views/pages/now-playing";
 import Upcoming from "../views/pages/upcoming";
 import Detail from "../views/pages/detail";
@@ -10,14 +11,14 @@ import Latest from "../views/pages/latest";
 
 const routes = {
   "/": Homepage, // default page
-  "/now-playing": NowPlaying,
-  "/upcoming": Upcoming,
+  "/movies": List,
+  "/nowplaying-movies": NowPlaying,
+  "/upcoming-movies": Upcoming,
   "/detail/:id": Detail,
-  "/like": Like,
-  "/list-movies": List,
-  "/trending": Trending,
-  "/populer": Populer,
-  "/latest": Latest,
+  "/trending-movies": Trending,
+  "/populer-movies": Populer,
+  "/latest-movies": Latest,
+  "/bookmark": Like,
 };
 
 export default routes;

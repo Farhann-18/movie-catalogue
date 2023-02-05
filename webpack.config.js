@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
@@ -44,6 +45,9 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         test: /\.js(\?.*)?$/i,
+        include: /\/includes/,
+        exclude: /\/excludes/,
+        parallel: true,
       }),
       new CssMinimizerPlugin({
         minimizerOptions: {
