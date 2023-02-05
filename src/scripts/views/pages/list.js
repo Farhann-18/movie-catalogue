@@ -11,7 +11,7 @@ const List = {
         <div class="container-fluid p-2 movie-bg">
             <div class="d-flex justify-content-center align-self-center mb-3">
                     <header class="movie-bg-header px-3">
-                        <h3 class="text-white">Welcome Movie Catalogue</h3>
+                        <h1 class="text-white">Welcome Movie Catalogue</h1>
                         <p>Search & find the latest movies</p>
                     </header>    
             </div>
@@ -24,28 +24,28 @@ const List = {
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="card mb-3 bg-white rounded">
                   <div class="card-body text-center">
-                      <a href="#/upcoming" class="text-decoration-none text-dark">Upcoming</a>
+                      <a href="#/upcoming-movies" aria-label="Upcoming Movie" class="text-decoration-none text-dark">Upcoming</a>
                   </div>
                 </div>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="card mb-3 bg-white rounded">
                   <div class="card-body text-center">
-                      <a href="#/populer" class="text-decoration-none text-dark">Populer</a>
+                      <a href="#/populer-movies" aria-label="Populer movie" class="text-decoration-none text-dark">Populer</a>
                   </div>
                 </div>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="card mb-3 bg-white rounded">
                   <div class="card-body text-center">
-                      <a href="#/now-playing" class="text-decoration-none text-dark">Now Playing</a>
+                      <a href="#/nowplaying-movies" aria-label="Now Playing Movie" class="text-decoration-none text-dark">Now Playing</a>
                   </div>
                 </div>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="card mb-3 bg-white rounded">
                   <div class="card-body text-center">
-                      <a href="#/latest" class="text-decoration-none text-dark">Latest</a>
+                      <a href="#/latest-movies" aria-label="Latest movie" class="text-decoration-none text-dark">Latest</a>
                   </div>
                 </div>
               </div>
